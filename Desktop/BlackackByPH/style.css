@@ -1,0 +1,201 @@
+:root {
+  --poker-green:#35654d; /*poker table green hex*/
+  --bright-red:#ec0000;
+  --google-font:'Fira Sans', sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--poker-green);
+  padding: 20px;
+  font-family: var(--google-font);
+}
+
+#main-wrapper {
+  color: #fff;
+  width: 100%;
+}
+
+
+#output {
+  font-size: 1.3em;
+}
+
+#btndeal,
+#myactions {
+  display: none;
+}
+
+.btn {
+  border-radius: 5px;
+  padding: 8px 20px;
+  color: white;
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  text-shadow: 1px 1px #000000;
+}
+
+#cover {
+  height: 160px;
+  width: 120px;
+  background-color: var(--bright-red);
+  border-radius: 10px;
+  position: absolute;
+  border: 1.5px solid black;
+  padding: 3px;
+}
+
+.icard {
+  height: 160px;
+  width: 120px;
+  padding: 3px;
+  border: 1.5px solid black;
+  background-color: white;
+  border-radius: 10px;
+  position: absolute;
+  left: 100px;
+  display: inline-block;
+}
+
+.top-card {
+  font-size: 30px;
+  line-height: 20px;
+  position: relative;
+  left: 2px;
+  top: 2px;
+}
+
+.content-card {
+  text-align: center;
+  font-size: 70px;
+}
+
+.bottom-card {
+  font-size: 30px;
+  line-height: 20px;
+  position: relative;
+  right: 2px;
+  bottom: 7px;
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+}
+
+.clubs,
+.spades {
+  color: black;
+}
+
+.hearts,
+.diams {
+  color: red;
+}
+
+.hearts .suit::after {
+  content: '\2665';
+}
+
+.diams .suit::after {
+  content: '\2666';
+}
+
+.spades .suit::after {
+  content: '\2660';
+}
+
+.clubs .suit::after {
+  content: '\2663';
+}
+
+#dealerHolder,
+#playerHolder {
+  height: 180px;
+  width: 500px;
+}
+
+#message {
+  height: 55px;
+  font-size: 30px;
+  text-align: center;
+}
+
+#btnhold {
+  background-color: green;
+  border: 1.5px solid darkgreen;
+}
+
+#btnhit {
+  background-color: red;
+  border: 1.5px solid darkred;
+}
+
+#btndouble {
+  background-color: blue;
+}
+
+#btndeal {
+  background-color: #b90606;
+  font-size: 20px;
+  border: 1px solid #630202;
+}
+
+
+#btnstart {
+  background-color: var(--bright-red);
+  border:1.5px solid #c70101;
+  margin-bottom: 10px;
+}
+
+#mybet {
+  font-size: 22px;
+}
+
+#img-holder {
+  position: relative;
+  z-index: -1;
+  top: -100px;
+  width: 400px;
+  float: right;
+}
+
+
+.total {
+  font-size: 22px;
+}
+
+
+/*Hover effects*/
+
+#btnhold:hover {
+  background-color: #006400;
+  transition: 0.2s;
+}
+
+#btnhit:hover {
+  background-color: #8b0000;
+  transition: 0.2s;
+}
+
+#btndeal:hover {
+  background-color: #630202;
+  transition: 0.2s;
+}
+
+#btnstart:hover {
+  background-color: #c70101;
+  transition: 0.2s;
+}
+/*Media Query*/
+
+@media only screen and (max-width: 768px) {
+  #img-holder {
+    display: none;
+  }
+}
